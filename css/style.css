@@ -1,0 +1,185 @@
+@font-face {
+    font-family: Graphik-Light-Web;
+    src: url(fonts/Graphik-Light-Web.ttf);
+}
+@font-face {
+    font-family: Graphik-Regular-Web;
+    src: url(fonts/Graphik-Regular-Web.ttf);
+}
+@font-face {
+    font-family: Graphik-Semibold-Web;
+    src: url(fonts/Graphik-Semibold-Web.ttf);
+}
+@font-face {
+    font-family: TiemposHeadLineWeb-Bold;
+    src: url(fonts/TiemposHeadlineWeb-Bold.ttf);
+}
+@font-face {
+    font-family: TiemposTextWeb-Regular;
+    src: url(fonts/TiemposTextWeb-Regular.ttf);
+}
+@font-face {
+    font-family: TiemposTextWeb-RegularItalic;
+    src: url(fonts/TiemposTextWeb-RegularItalic.ttf);
+}
+@font-face {
+    font-family: TiemposTextWeb-Semibold;
+    src: url(fonts/TiemposTextWeb-Semibold.ttf);
+}
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    --secondaryColor1: #B1C1D1;
+    --secondaryColor2: #99AABB;
+    --secondaryColor3: #2c3440;
+    --primaryColor1: #1B2026;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primaryColor1);
+}
+nav {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    background-color: #1B2026;
+    padding: 20px;
+}
+nav a {
+    padding: 0 15px;
+    font-family: Graphik-Semibold-Web;
+    text-decoration: none;
+    color: var(--secondaryColor1);
+    transition: 0.25s ease-in;
+}
+nav a:hover {
+    color: white;
+}
+nav input {
+    border: none;
+    height: 25px;
+    width: 125px;
+    margin: 0 15px;
+    padding: 0 20px 0 15px;
+    border-radius: 25px;
+    color: var(--secondaryColor1);
+    font-family: Graphik-Regular-Web;
+}
+nav input:focus {
+    outline: none;
+}
+.hero {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-image:
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+        url(img/the-brutalist/carousel/img0.jpg);
+    color: white;
+    font-family: TiemposTextWeb-Semibold;
+    font-size: 1.5em;
+    
+}
+.hero img {
+    height: 200px;
+    border-radius: 100%;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    padding: 20px;
+    margin: 0 auto;
+}
+.container h3 {
+    padding-bottom: 5px;
+    color: var(--secondaryColor1);
+    font-family: Graphik-Light-Web;
+    font-size: 1.5em;
+}
+hr {
+    height: 2px;
+    background-color: var(--secondaryColor2);
+    border: none;
+}
+.film-list, .about-me {
+    padding: 15px 0;
+    margin-bottom: 15px;
+    width: 100%;
+}
+.films-list {
+    padding: 20px 20px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 10px;
+}
+.film-cover {
+    display: flex;
+    justify-content: center;
+    height: 150px;
+    aspect-ratio: 2 / 3;
+    overflow: hidden;
+    border: 3px solid rgba(0,0,0,0);
+    transition: border-color 0.125s ease-in;
+    border-radius: 7.5px;
+}
+.film-cover:hover {
+    border-color: var(--secondaryColor1);
+}
+.film-cover a img, .information-img img {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.information {
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+}
+.information-img {
+    height: 250px;
+    border-radius: 100%;
+    overflow: hidden;
+}
+.information p {
+    color: var(--secondaryColor1);
+    font-family: Graphik-Light-Web;
+    font-size: 1.25em;
+    text-align: center;
+    line-height: 1.5;
+}
+footer {
+    background-color: var(--secondaryColor3);
+    padding: 5px 20px 20px;
+}
+.foo-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.foo-links a {
+    padding: 5px 10px;
+    font-family: Graphik-Semibold-Web;
+    text-decoration: none;
+    color: var(--secondaryColor2);
+    transition: 0.25s ease-in;
+}
+.foo-links a:hover {
+    color: var(--secondaryColor1);
+}
+footer p {
+    color: var(--secondaryColor2);
+    font-family: Graphik-Light-Web;
+    font-size: 1em;
+    text-align: center;
+    line-height: 1.5;
+}
